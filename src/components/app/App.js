@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import netlifyIdentity from 'netlify-identity-widget'
 
+import EmployeeList from '../employeeList/EmployeeList'
+
 // Helpers
 import { loginUser, logoutUser } from '../identityActions'
 
@@ -13,7 +15,7 @@ const App = () => {
   useEffect(() => {
     const currentUser = localStorage.getItem('currentUser')
     if (currentUser) {
-      setUser(JSON.parse(user))
+      setUser(currentUser)
     } else {
       loginUser()
     }
@@ -33,15 +35,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <header className="App-header">
-          Adattivo Employees Challenge
-      </header>
       {user ? (
         <div className='App card-panel'>
           <button
             onClick={handleLogOut}>
             &larr;Logout
           </button>
+          <EmployeeList />
         </div>
       ) : (
         <div className='App'>
