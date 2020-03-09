@@ -11,15 +11,6 @@ const initialState = {
       dateOfEmployment: 'March 25, 2020',
       isActive: true,
     },
-    {
-      id: 1,
-      firstName: 'Brett',
-      middleInitial: 'T',
-      lastName: 'Bloxom',
-      dateOfBirth: 'April 29, 1991',
-      dateOfEmployment: 'March 15, 2011',
-      isActive: true,
-    },
   ],
 }
 

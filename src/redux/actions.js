@@ -28,7 +28,10 @@ export const editEmployee = content => ({
 })
 
 export function toggleActive(index) {
-  return { type: TOGGLE_ACTIVE, index }
+  return { 
+    type: TOGGLE_ACTIVE,
+    index
+  }
 }
 
 export const setVisibilityFilter = filter => ({
