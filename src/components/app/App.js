@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import netlifyIdentity from 'netlify-identity-widget'
 
 import EmployeeList from '../employeeList/EmployeeList'
+import AddEmployee from '../addEmployee/AddEmployee'
 
 // Helpers
 import { loginUser, logoutUser } from '../identityActions'
@@ -41,6 +42,7 @@ const App = () => {
             onClick={handleLogOut}>
             &larr;Logout
           </button>
+          <AddEmployee />
           <EmployeeList />
         </div>
       ) : (
