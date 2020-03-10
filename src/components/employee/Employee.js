@@ -15,7 +15,7 @@ const inactive = (
 const Employee = ({ employee }) => (
   <div className='card-panel employee'>
     <h2>
-      {employee.firstName} {employee.middleInitial}. {employee.lastName}
+      {employee.firstName} {employee.middleInitial !== '' ? `${employee.middleInitial}.` : ''} {employee.lastName}
     </h2>
     <div className='employee-info'>
       <b>Date of Birth:</b> {employee.dateOfBirth}
