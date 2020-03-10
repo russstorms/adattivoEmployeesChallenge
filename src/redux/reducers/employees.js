@@ -62,6 +62,7 @@ const initialState = {
 export default function employees(state = initialState, action) {
   switch (action.type) {
     case ADD_EMPLOYEE: {
+      console.log('we in')
       const { content } = action.payload
       return {
         ...state,

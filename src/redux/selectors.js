@@ -18,3 +18,4 @@ export const getEmployeesByVisibilityFilter = (store, visibilityFilter) => {
       return allEmployees
   }
 }
+

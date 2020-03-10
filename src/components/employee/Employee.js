@@ -1,8 +1,8 @@
 import React from 'react'
-// import EditEmployee from './EditEmployee'
+import EditEmployee from '../editEmployee/EditEmployee'
 
 const active = (
-  <h5 className='employee-info' style={{ color: '#26a69a' }}>
+  <h5 className='employee-info' style={{ color: '#50C878' }}>
     Active
   </h5>
 )
@@ -24,7 +24,7 @@ const Employee = ({ employee }) => (
       <b>Date of Employment:</b> {employee.dateOfEmployment}
     </div>
     {employee.isActive ? active : inactive}
-    {/* <EditEmployee employee={employee} /> */}
+    <EditEmployee employee={employee} />
   </div>
 )
 

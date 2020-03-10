@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { addEmployee } from '../../redux/actions'
-import { v4 as uuid } from 'uuid';
+import { v4 as uuid } from 'uuid'
 import {
   Backdrop,
   Modal,
@@ -25,7 +25,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-const AddEmployee = () => {
+const AddEmployee = ({ addEmployee }) => {
   // Form State
   const [id, setId] = useState(null)
   const [firstName, setFirstName] = useState('')
@@ -170,7 +170,7 @@ const AddEmployee = () => {
               type="submit"
               disabled={isEnabled ? false : true}
             >
-                Create!
+              Add Employee
             </button>
           </form>
         </Fade>

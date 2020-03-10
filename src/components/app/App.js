@@ -3,6 +3,7 @@ import netlifyIdentity from 'netlify-identity-widget'
 
 import EmployeeList from '../employeeList/EmployeeList'
 import AddEmployee from '../addEmployee/AddEmployee'
+import FilterEmployees from '../filterEmployee/FilterEmployees'
 
 // Helpers
 import { loginUser, logoutUser } from '../identityActions'
@@ -40,8 +41,9 @@ const App = () => {
         <div className='App card-panel'>
           <button
             onClick={handleLogOut}>
-            &larr;Logout
+            Logout
           </button>
+          <FilterEmployees />
           <AddEmployee />
           <EmployeeList />
         </div>
@@ -52,7 +54,7 @@ const App = () => {
             <h3>Please login to continue</h3>
             <button
               onClick={handleLogIn}>
-              Login&rarr;
+              Login
             </button>
           </div>
         </div>
