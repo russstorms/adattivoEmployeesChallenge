@@ -36,7 +36,7 @@ const App = () => {
   }
 
   return (
-    <div className="App">
+    <div className="App animated fadeIn">
       {user ? (
         <div className='App'>
           <button
@@ -52,7 +52,7 @@ const App = () => {
       ) : (
         <div className='App'>
           <div className='Login welcome-info'>
-            <h1>Addativo Employees Challenge</h1>
+            <h1>Adattivo Employees Challenge</h1>
             <h3>Please Login to Continue</h3>
             <button
               className="tirtiaryBtn"
