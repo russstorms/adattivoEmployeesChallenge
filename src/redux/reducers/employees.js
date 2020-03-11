@@ -54,6 +54,33 @@ const initialState = {
       dateOfEmployment: 'February 18, 2020',
       isActive: true,
     },
+    {
+      id: 6,
+      firstName: 'Terry',
+      middleInitial: 'A',
+      lastName: 'Crews',
+      dateOfBirth: 'July 30, 1968',
+      dateOfEmployment: 'March 11, 2018',
+      isActive: false,
+    },
+    {
+      id: 7,
+      firstName: 'Alex',
+      middleInitial: '',
+      lastName: 'Honnold',
+      dateOfBirth: 'August 17, 1985',
+      dateOfEmployment: 'November 2, 2019',
+      isActive: false,
+    },
+    {
+      id: 8,
+      firstName: 'Mark',
+      middleInitial: 'L',
+      lastName: 'McMorris',
+      dateOfBirth: 'December 9, 1993',
+      dateOfEmployment: 'April 26, 2020',
+      isActive: true,
+    },
   ],
 }
 
