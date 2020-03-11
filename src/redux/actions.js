@@ -1,20 +1,13 @@
-import {
-  ADD_EMPLOYEE,
-  EDIT_EMPLOYEE,
-  SET_VISIBILITY_FILTER,
-  TOGGLE_ACTIVE,
-} from './actionTypes'
-
 // Action creators
 export const addEmployee = content => ({
-  type: ADD_EMPLOYEE,
+  type: 'ADD_EMPLOYEE',
   payload: {
     content,
   },
 })
 
 export const editEmployee = content => ({
-  type: EDIT_EMPLOYEE,
+  type: 'EDIT_EMPLOYEE',
   payload: {
     content,
   },
@@ -22,13 +15,13 @@ export const editEmployee = content => ({
 
 export function toggleActive(index) {
   return { 
-    type: TOGGLE_ACTIVE,
+    type: 'TOGGLE_ACTIVE',
     index
   }
 }
 
 export const setVisibilityFilter = filter => ({
-  type: SET_VISIBILITY_FILTER,
+  type: 'SET_VISIBILITY_FILTER',
   payload: { filter },
 })
 

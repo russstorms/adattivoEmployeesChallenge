@@ -1,5 +1,3 @@
-import { ADD_EMPLOYEE, EDIT_EMPLOYEE } from '../actionTypes'
-
 const initialState = {
   employees: [
     {
@@ -61,14 +59,14 @@ const initialState = {
 
 export default function employees(state = initialState, action) {
   switch (action.type) {
-    case ADD_EMPLOYEE: {
+    case 'ADD_EMPLOYEE': {
       const { content } = action.payload
       return {
         ...state,
         employees: [...state.employees, content],
       }
     }
-    case EDIT_EMPLOYEE: {
+    case 'EDIT_EMPLOYEE': {
       const { content } = action.payload
       return {
         ...state,

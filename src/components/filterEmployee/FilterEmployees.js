@@ -11,7 +11,7 @@ const FilterEmployees = ({ activeFilter, setVisibilityFilter }) => {
   // console.log('VIS FILTERS OBJ KEYS', Object.keys(VISIBILITY_FILTERS))
 
   return (
-    <div className='filters'>
+    <div className='FilterEmployees'>
       {Object.keys(VISIBILITY_FILTERS).map(filterKey => {
         const filterStatus = VISIBILITY_FILTERS[filterKey]
         

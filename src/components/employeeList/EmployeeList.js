@@ -1,7 +1,26 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Employee from '../employee/Employee'
-import { getEmployeesByVisibilityFilter } from '../../redux/selectors'
+import { VISIBILITY_FILTERS } from '../../redux/actions'
+
+// Grab employee state
+const getEmployeesState = store => store.employees
+
+const getEmployeeList = store =>
+  getEmployeesState(store) ? getEmployeesState(store).employees : []
+
+const getEmployeesByVisibilityFilter = (store, visibilityFilter) => {
+  const allEmployees = getEmployeeList(store)
+  switch (visibilityFilter) {
+    case VISIBILITY_FILTERS.ACTIVE:
+      return allEmployees.filter(employee => employee.isActive)
+    case VISIBILITY_FILTERS.INACTIVE:
+      return allEmployees.filter(employee => !employee.isActive)
+    case VISIBILITY_FILTERS.ALL:
+    default:
+      return allEmployees
+  }
+}
 
 const EmployeeList = ({ employees }) => {
   return (
