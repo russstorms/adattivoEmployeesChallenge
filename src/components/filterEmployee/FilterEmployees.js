@@ -6,7 +6,7 @@ import { VISIBILITY_FILTERS } from '../../redux/actions'
 // Styles
 import '../../styles/index.css'
 
-const FilterEmployees = ({ activeFilter, setVisibilityFilter }) => {
+const FilterEmployees = ({ currentFilter, setVisibilityFilter }) => {
   // console.log('VIS FILTERS', VISIBILITY_FILTERS)
   // console.log('VIS FILTERS OBJ KEYS', Object.keys(VISIBILITY_FILTERS))
 
@@ -17,9 +17,9 @@ const FilterEmployees = ({ activeFilter, setVisibilityFilter }) => {
         
         return (
           <button
-            key={`visibility-filter-${filterStatus}`}
+            key={filterStatus}
             className={
-              activeFilter === filterStatus ?
+              currentFilter === filterStatus ?
               'active' :
               'non-active'
             }
@@ -35,9 +35,9 @@ const FilterEmployees = ({ activeFilter, setVisibilityFilter }) => {
 }
 
 const mapStateToProps = state => {
-  return { activeFilter: state.visibilityFilter }
+  return { currentFilter: state.visibilityFilter }
 }
-// export default VisibilityFilters;
+
 export default connect(
   mapStateToProps,
   { setVisibilityFilter }

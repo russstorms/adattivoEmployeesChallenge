@@ -51,9 +51,10 @@ const App = () => {
         <div className='App'>
           <div className='Login card-panel'>
             <h1>Welcome</h1>
-            <h3>Please login to continue</h3>
+            <h3>Please Login to Continue</h3>
             <button
-              onClick={handleLogIn}>
+              onClick={handleLogIn}
+            >
               Login
             </button>
           </div>

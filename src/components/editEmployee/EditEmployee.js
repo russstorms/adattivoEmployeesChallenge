@@ -26,6 +26,7 @@ const useStyles = makeStyles(() => ({
 
 const EditEmployee = ({ editEmployee, ...props }) => {
   const { employee } = props
+  
   // Form State
   const [id] = useState(employee.id)
   const [firstName, setFirstName] = useState(employee.firstName)
