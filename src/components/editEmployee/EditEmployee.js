@@ -24,7 +24,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-const EditEmployee = () => {
+const EditEmployee = ({ editEmployee, ...props }) => {
   // Form State
   const [firstName, setFirstName] = useState('')
   const [middleInitial, setMiddleInitial] = useState('')
@@ -65,12 +65,13 @@ const EditEmployee = () => {
     setIsActive(!isActive)
   }
 
+  const { employee } = props
+
   const isEnabled =
-    firstName.length > 0 &&
-    middleInitial.length > 0 &&
-    lastName.length > 0 &&
-    dateOfBirth.length > 0 &&
-    dateOfEmployment.length > 0
+    employee.firstName.length > 0 &&
+    employee.lastName.length > 0 &&
+    employee.dateOfBirth.length > 0 &&
+    employee.dateOfEmployment.length > 0
 
   return (
     <div className='Edit-Employee'>
@@ -102,9 +103,8 @@ const EditEmployee = () => {
             <TextField
               variant="outlined"
               label='First Name'
-              value={firstName}
               onChange={e => setFirstName(e.target.value)}
-              defaultValue={firstName}
+              defaultValue={employee.firstName}
               margin="normal"
               required
               fullWidth
@@ -112,9 +112,8 @@ const EditEmployee = () => {
             <TextField
               variant="outlined"
               label='Middle Initial'
-              value={middleInitial}
               onChange={e => setMiddleInitial(e.target.value)}
-              defaultValue={middleInitial}
+              defaultValue={employee.middleInitial}
               margin="normal"
               required
               fullWidth
@@ -123,9 +122,8 @@ const EditEmployee = () => {
               variant="outlined"
               label='Last Name'
               name='lastName'
-              value={lastName}
               onChange={e => setLastName(e.target.value)}
-              defaultValue={lastName}
+              defaultValue={employee.lastName}
               margin="normal"
               required
               fullWidth
@@ -134,9 +132,8 @@ const EditEmployee = () => {
               variant="outlined"
               label='Date of Birth'
               name='dateOfBirth'
-              value={dateOfBirth}
               onChange={e => setDateOfBirth(e.target.value)}
-              defaultValue={dateOfBirth}
+              defaultValue={employee.dateOfBirth}
               margin="normal"
               required
               fullWidth
@@ -145,9 +142,8 @@ const EditEmployee = () => {
               variant="outlined"
               label='Date of Employment'
               name='dateOfEmployment'
-              value={dateOfEmployment}
               onChange={e => setDateOfEmployment(e.target.value)}
-              defaultValue={dateOfEmployment}
+              defaultValue={employee.dateOfEmployment}
               margin="normal"
               required
               fullWidth

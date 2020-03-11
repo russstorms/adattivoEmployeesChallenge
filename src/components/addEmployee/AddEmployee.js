@@ -81,7 +81,6 @@ const AddEmployee = ({ addEmployee }) => {
 
   const isEnabled =
     firstName.length > 0 &&
-    middleInitial.length > 0 &&
     lastName.length > 0 &&
     dateOfBirth.length > 0 &&
     dateOfEmployment.length > 0
@@ -128,7 +127,6 @@ const AddEmployee = ({ addEmployee }) => {
               value={middleInitial}
               onChange={e => setMiddleInitial(e.target.value)}
               margin="normal"
-              required
               fullWidth
             />
             <TextField

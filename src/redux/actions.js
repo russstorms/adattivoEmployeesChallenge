@@ -5,13 +5,6 @@ import {
   TOGGLE_ACTIVE,
 } from './actionTypes'
 
-// Filters
-export const VISIBILITY_FILTERS = {
-  ALL: 'All',
-  ACTIVE: 'Active',
-  INACTIVE: 'Inactive',
-}
-
 // Action creators
 export const addEmployee = content => ({
   type: ADD_EMPLOYEE,
@@ -38,4 +31,11 @@ export const setVisibilityFilter = filter => ({
   type: SET_VISIBILITY_FILTER,
   payload: { filter },
 })
+
+// Filters
+export const VISIBILITY_FILTERS = {
+  ALL: 'All',
+  ACTIVE: 'Active',
+  INACTIVE: 'Inactive',
+}
 

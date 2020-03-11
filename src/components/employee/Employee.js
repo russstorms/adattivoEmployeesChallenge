@@ -8,7 +8,7 @@ const active = (
 )
 const inactive = (
   <h5 className='employee-info' style={{ color: '#F44336' }}>
-    Not Active
+    Inactive
   </h5>
 )
 
