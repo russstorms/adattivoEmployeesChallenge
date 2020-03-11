@@ -12,6 +12,7 @@ import {
 } from '@material-ui/core'
 
 // Styles
+import './AddEmployee.css'
 import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles(() => ({
   modal: {
@@ -80,6 +81,12 @@ const AddEmployee = ({ addEmployee }) => {
     setIsActive(!isActive)
   }
 
+  const formStyles = ({
+    style: {
+      color: '#FFFFFF'
+    }
+  })
+
   const isEnabled =
     firstName.length > 0 &&
     lastName.length > 0 &&
@@ -89,7 +96,7 @@ const AddEmployee = ({ addEmployee }) => {
   return (
     <div className='AddEmployee'>
       <button
-        className=""
+        className="secondaryBtn"
         onClick={handleOpen}
       >
         Add New Employee
@@ -114,6 +121,8 @@ const AddEmployee = ({ addEmployee }) => {
           >
             <h4 className="formTitle">Add Employee</h4>
             <TextField
+              InputLabelProps={formStyles}
+              InputProps={formStyles}
               variant="outlined"
               label='First Name'
               value={firstName}
@@ -123,6 +132,8 @@ const AddEmployee = ({ addEmployee }) => {
               fullWidth
             />
             <TextField
+              InputLabelProps={formStyles}
+              InputProps={formStyles}
               variant="outlined"
               label='Middle Initial'
               value={middleInitial}
@@ -131,6 +142,8 @@ const AddEmployee = ({ addEmployee }) => {
               fullWidth
             />
             <TextField
+              InputLabelProps={formStyles}
+              InputProps={formStyles}
               variant="outlined"
               label='Last Name'
               name='lastName'
@@ -141,6 +154,8 @@ const AddEmployee = ({ addEmployee }) => {
               fullWidth
             />
             <TextField
+              InputLabelProps={formStyles}
+              InputProps={formStyles}
               variant="outlined"
               label='Date of Birth'
               name='dateOfBirth'
@@ -151,6 +166,8 @@ const AddEmployee = ({ addEmployee }) => {
               fullWidth
             />
             <TextField
+              InputLabelProps={formStyles}
+              InputProps={formStyles}
               variant="outlined"
               label='Date of Employment'
               name='dateOfEmployment'
@@ -164,13 +181,15 @@ const AddEmployee = ({ addEmployee }) => {
               control={<Switch checked={isActive} onChange={toggleActive} />}
               label={isActive ? 'Active' : 'Inactive'}
             />
-            <button
-              className=""
-              type="submit"
-              disabled={isEnabled ? false : true}
-            >
-              Add Employee
+            {isEnabled &&
+              <button
+                className="secondaryBtn"
+                type="submit"
+              >
+                Add Employee
             </button>
+            }
+
           </form>
         </Fade>
       </Modal>

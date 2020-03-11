@@ -1,0 +1,12 @@
+.AddEmployee {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+form {
+  background-color: rgba(3, 116, 180, 0.9);
+  color: #FFFFFF;
+  padding: 60px;
+}
+

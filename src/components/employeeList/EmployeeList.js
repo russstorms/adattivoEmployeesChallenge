@@ -3,6 +3,9 @@ import { connect } from 'react-redux'
 import Employee from '../employee/Employee'
 import { VISIBILITY_FILTERS } from '../../redux/actions'
 
+// Styles
+import './EmployeeList.css'
+
 // Grab employee state
 const getEmployeesState = store => store.employees
 

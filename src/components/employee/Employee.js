@@ -1,27 +1,41 @@
 import React from 'react'
 import EditEmployee from '../editEmployee/EditEmployee'
 
+// Styles
+import './Employee.css'
+
 const active = (
-  <h5 className='active-status' style={{ color: '#50C878' }}>
+  <h5 className='active-status'>
     Active
   </h5>
 )
+
 const inactive = (
-  <h5 className='inactive-status' style={{ color: '#F44336' }}>
+  <h5 className='inactive-status'>
     Inactive
   </h5>
 )
 
 const Employee = ({ employee }) => (
   <div className='Employee'>
-    <h2>
+    <h2 className='employee-name'>
       {employee.firstName} {employee.middleInitial !== '' ? `${employee.middleInitial}.` : ''} {employee.lastName}
     </h2>
-    <div className='employee-info'>
-      <b>Date of Birth:</b> {employee.dateOfBirth}
+    <div>
+      <span className='employee-info'>
+        Date of Birth:
+      </span>
+      <span className='employee-date'>
+        {employee.dateOfBirth}
+      </span>
     </div>
-    <div className='employee-info'>
-      <b>Date of Employment:</b> {employee.dateOfEmployment}
+    <div>
+      <span className='employee-info'>
+        Date of Employment:
+      </span>
+      <span className='employee-date'>
+        {employee.dateOfEmployment}
+      </span>
     </div>
     {employee.isActive ? active : inactive}
     <EditEmployee employee={employee} />
@@ -29,3 +43,4 @@ const Employee = ({ employee }) => (
 )
 
 export default Employee
+
