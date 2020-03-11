@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { editEmployee } from '../../redux/actions'
 import {
@@ -25,13 +25,14 @@ const useStyles = makeStyles(() => ({
 }))
 
 const EditEmployee = ({ editEmployee, ...props }) => {
+  const { employee } = props
   // Form State
-  const [firstName, setFirstName] = useState('')
-  const [middleInitial, setMiddleInitial] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [dateOfBirth, setDateOfBirth] = useState('')
-  const [dateOfEmployment, setDateOfEmployment] = useState('')
-  const [isActive, setIsActive] = useState(false)
+  const [firstName, setFirstName] = useState(employee.firstName)
+  const [middleInitial, setMiddleInitial] = useState(employee.middleInitial)
+  const [lastName, setLastName] = useState(employee.lastName)
+  const [dateOfBirth, setDateOfBirth] = useState(employee.dateOfBirth)
+  const [dateOfEmployment, setDateOfEmployment] = useState(employee.dateOfEmployment)
+  const [isActive, setIsActive] = useState(employee.isActive)
 
   // Material UI Modal
   const classes = useStyles();
@@ -44,10 +45,6 @@ const EditEmployee = ({ editEmployee, ...props }) => {
   const handleClose = () => {
     setOpen(false)
   }
-
-  useEffect(() => {
-
-  }, [])
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -64,8 +61,6 @@ const EditEmployee = ({ editEmployee, ...props }) => {
   const toggleActive = () => {
     setIsActive(!isActive)
   }
-
-  const { employee } = props
 
   const isEnabled =
     employee.firstName.length > 0 &&
@@ -99,7 +94,7 @@ const EditEmployee = ({ editEmployee, ...props }) => {
           <form
             onSubmit={handleSubmit}
           >
-            <h4 className="formTitle">Add Employee</h4>
+            <h4 className="formTitle">Edit Employee Information</h4>
             <TextField
               variant="outlined"
               label='First Name'
@@ -157,7 +152,7 @@ const EditEmployee = ({ editEmployee, ...props }) => {
               type="submit"
               disabled={isEnabled ? false : true}
             >
-                Create!
+              Edit Employee
             </button>
           </form>
         </Fade>
