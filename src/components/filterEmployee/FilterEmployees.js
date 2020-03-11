@@ -1,19 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { setVisibilityFilter } from '../../redux/actions'
-import { VISIBILITY_FILTERS } from '../../redux/actions'
+import { setStatusFilter } from '../../redux/actions'
+import { STATUS_FILTERS } from '../../redux/actions'
 
 // Styles
 import '../../styles/index.css'
 
-const FilterEmployees = ({ currentFilter, setVisibilityFilter }) => {
+const FilterEmployees = ({ currentFilter, setStatusFilter }) => {
   // console.log('VIS FILTERS', VISIBILITY_FILTERS)
   // console.log('VIS FILTERS OBJ KEYS', Object.keys(VISIBILITY_FILTERS))
 
   return (
     <div className='filters'>
-      {Object.keys(VISIBILITY_FILTERS).map(filterKey => {
-        const filterStatus = VISIBILITY_FILTERS[filterKey]
+      {Object.keys(STATUS_FILTERS).map(filterKey => {
+        const filterStatus = STATUS_FILTERS[filterKey]
         
         return (
           <button
@@ -24,7 +24,7 @@ const FilterEmployees = ({ currentFilter, setVisibilityFilter }) => {
               'non-active'
             }
             onClick={() => {
-              setVisibilityFilter(filterStatus)
+              setStatusFilter(filterStatus)
             }}>
             {filterStatus}
           </button>
@@ -35,11 +35,11 @@ const FilterEmployees = ({ currentFilter, setVisibilityFilter }) => {
 }
 
 const mapStateToProps = state => {
-  return { currentFilter: state.visibilityFilter }
+  return { currentFilter: state.statusFilter }
 }
 
 export default connect(
   mapStateToProps,
-  { setVisibilityFilter }
+  { setStatusFilter }
 )(FilterEmployees)
 

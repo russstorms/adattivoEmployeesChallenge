@@ -1,11 +1,11 @@
-import { SET_VISIBILITY_FILTER } from '../actionTypes'
-import { VISIBILITY_FILTERS } from '../actions'
+import { SET_STATUS_FILTER } from '../actionTypes'
+import { STATUS_FILTERS } from '../actions'
 
-const initialState = VISIBILITY_FILTERS.ALL
+const initialState = STATUS_FILTERS.ALL
 
-const visibilityFilter = (state = initialState, action) => {
+const statusFilter = (state = initialState, action) => {
   switch (action.type) {
-      case SET_VISIBILITY_FILTER: {
+      case SET_STATUS_FILTER: {
       return action.payload.filter
     }
     default: {
@@ -14,5 +14,5 @@ const visibilityFilter = (state = initialState, action) => {
   }
 }
 
-export default visibilityFilter
+export default statusFilter
 
