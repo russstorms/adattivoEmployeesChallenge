@@ -119,7 +119,7 @@ const AddEmployee = ({ addEmployee }) => {
           <form
             onSubmit={handleSubmit}
           >
-            <h4 className="formTitle">Add Employee</h4>
+            <h3 className="formTitle">Add Employee</h3>
             <TextField
               InputLabelProps={formStyles}
               InputProps={formStyles}

@@ -66,6 +66,12 @@ const EditEmployee = ({ editEmployee, ...props }) => {
     setIsActive(!isActive)
   }
 
+  const formStyles = ({
+    style: {
+      color: '#FFFFFF'
+    }
+  })
+
   const isEnabled =
     employee.firstName.length > 0 &&
     employee.lastName.length > 0 &&
@@ -75,7 +81,7 @@ const EditEmployee = ({ editEmployee, ...props }) => {
   return (
     <div className='EditEmployee'>
       <button
-        className=""
+        className="tirtiaryBtn"
         onClick={handleOpen}
       >
         Edit Employee
@@ -98,8 +104,10 @@ const EditEmployee = ({ editEmployee, ...props }) => {
           <form
             onSubmit={handleSubmit}
           >
-            <h4 className="formTitle">Edit Employee Information</h4>
+            <h3 className="formTitle">Edit Employee Information</h3>
             <TextField
+              InputLabelProps={formStyles}
+              InputProps={formStyles}
               variant="outlined"
               label='First Name'
               onChange={e => setFirstName(e.target.value)}
@@ -109,6 +117,8 @@ const EditEmployee = ({ editEmployee, ...props }) => {
               fullWidth
             />
             <TextField
+              InputLabelProps={formStyles}
+              InputProps={formStyles}
               variant="outlined"
               label='Middle Initial'
               onChange={e => setMiddleInitial(e.target.value)}
@@ -118,6 +128,8 @@ const EditEmployee = ({ editEmployee, ...props }) => {
               fullWidth
             />
             <TextField
+              InputLabelProps={formStyles}
+              InputProps={formStyles}
               variant="outlined"
               label='Last Name'
               name='lastName'
@@ -128,6 +140,8 @@ const EditEmployee = ({ editEmployee, ...props }) => {
               fullWidth
             />
             <TextField
+              InputLabelProps={formStyles}
+              InputProps={formStyles}
               variant="outlined"
               label='Date of Birth'
               name='dateOfBirth'
@@ -138,6 +152,8 @@ const EditEmployee = ({ editEmployee, ...props }) => {
               fullWidth
             />
             <TextField
+              InputLabelProps={formStyles}
+              InputProps={formStyles}
               variant="outlined"
               label='Date of Employment'
               name='dateOfEmployment'
@@ -152,7 +168,7 @@ const EditEmployee = ({ editEmployee, ...props }) => {
               label={isActive ? 'Active' : 'Inactive'}
             />
             <button
-              className=""
+              className="secondaryBtn"
               type="submit"
               disabled={isEnabled ? false : true}
             >
