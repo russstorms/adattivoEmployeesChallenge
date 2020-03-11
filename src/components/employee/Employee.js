@@ -3,6 +3,7 @@ import EditEmployee from '../editEmployee/EditEmployee'
 
 // Styles
 import './Employee.css'
+import 'animate.css/animate.min.css'
 
 const active = (
   <h5 className='active-status'>
@@ -17,7 +18,7 @@ const inactive = (
 )
 
 const Employee = ({ employee }) => (
-  <div className='Employee'>
+  <div className='Employee animated fadeIn'>
     <h2 className='employee-name'>
       {employee.firstName} {employee.middleInitial !== '' ? `${employee.middleInitial}.` : ''} {employee.lastName}
     </h2>

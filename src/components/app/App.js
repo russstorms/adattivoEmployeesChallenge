@@ -38,7 +38,7 @@ const App = () => {
   return (
     <div className="App">
       {user ? (
-        <div className='App card-panel'>
+        <div className='App'>
           <button
             className="tirtiaryBtn logout"
             onClick={handleLogOut}
@@ -61,6 +61,8 @@ const App = () => {
               Login
             </button>
           </div>
+          <span className='background-shape' />
+          <span className='background-shape-two' />
         </div>
       )}
     </div>
