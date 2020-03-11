@@ -40,7 +40,9 @@ const App = () => {
       {user ? (
         <div className='App card-panel'>
           <button
-            onClick={handleLogOut}>
+            className="tirtiaryBtn logout"
+            onClick={handleLogOut}
+          >
             Logout
           </button>
           <FilterEmployees />
@@ -49,10 +51,11 @@ const App = () => {
         </div>
       ) : (
         <div className='App'>
-          <div className='Login card-panel'>
-            <h1>Welcome</h1>
+          <div className='Login welcome-info'>
+            <h1>Addativo Employees Challenge</h1>
             <h3>Please Login to Continue</h3>
             <button
+              className="tirtiaryBtn"
               onClick={handleLogIn}
             >
               Login

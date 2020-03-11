@@ -104,7 +104,7 @@ const EditEmployee = ({ editEmployee, ...props }) => {
           <form
             onSubmit={handleSubmit}
           >
-            <h3 className="formTitle">Edit Employee Information</h3>
+            <h3 className="formTitle">Edit {employee.firstName}'s Information</h3>
             <TextField
               InputLabelProps={formStyles}
               InputProps={formStyles}
