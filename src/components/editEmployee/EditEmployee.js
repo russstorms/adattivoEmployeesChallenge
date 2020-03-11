@@ -27,6 +27,7 @@ const useStyles = makeStyles(() => ({
 const EditEmployee = ({ editEmployee, ...props }) => {
   const { employee } = props
   // Form State
+  const [id] = useState(employee.id)
   const [firstName, setFirstName] = useState(employee.firstName)
   const [middleInitial, setMiddleInitial] = useState(employee.middleInitial)
   const [lastName, setLastName] = useState(employee.lastName)
@@ -49,6 +50,7 @@ const EditEmployee = ({ editEmployee, ...props }) => {
   const handleSubmit = e => {
     e.preventDefault()
     editEmployee({
+      id,
       firstName,
       middleInitial,
       lastName,
