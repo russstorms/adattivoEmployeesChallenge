@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { addEmployee } from '../../redux/actions'
+import logo from '../app/adattivo.png'
 import { v4 as uuid } from 'uuid'
 import {
   Backdrop,
@@ -119,6 +120,11 @@ const AddEmployee = ({ addEmployee }) => {
           <form
             onSubmit={handleSubmit}
           >
+            <img 
+              className='logo'
+              src={logo}
+              alt='adattivo logo, visit: http://adattivo.co'
+            />
             <h3 className="formTitle">Add Employee</h3>
             <TextField
               InputLabelProps={formStyles}

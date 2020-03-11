@@ -2,11 +2,11 @@ const initialState = {
   employees: [
     {
       id: 0,
-      firstName: 'Russ',
-      middleInitial: 'M',
-      lastName: 'Storms',
-      dateOfBirth: 'October 3, 1990',
-      dateOfEmployment: 'March 25, 2020',
+      firstName: 'Marcelo',
+      middleInitial: '',
+      lastName: 'Garcia',
+      dateOfBirth: 'January 17, 1983',
+      dateOfEmployment: 'February 18, 2020',
       isActive: true,
     },
     {
@@ -47,11 +47,11 @@ const initialState = {
     },
     {
       id: 5,
-      firstName: 'Marcelo',
-      middleInitial: '',
-      lastName: 'Garcia',
-      dateOfBirth: 'January 17, 1983',
-      dateOfEmployment: 'February 18, 2020',
+      firstName: 'Russ',
+      middleInitial: 'M',
+      lastName: 'Storms',
+      dateOfBirth: 'October 3, 1990',
+      dateOfEmployment: 'March 25, 2020',
       isActive: true,
     },
     {

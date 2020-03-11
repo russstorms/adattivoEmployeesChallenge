@@ -5,6 +5,8 @@ import EmployeeList from '../employeeList/EmployeeList'
 import AddEmployee from '../addEmployee/AddEmployee'
 import FilterEmployees from '../filterEmployee/FilterEmployees'
 
+import logo from './adattivo.png'
+
 // Helpers
 import { loginUser, logoutUser } from '../identityActions'
 
@@ -52,7 +54,12 @@ const App = () => {
       ) : (
         <div className='App'>
           <div className='Login welcome-info'>
-            <h1>Adattivo Employees Challenge</h1>
+            <img 
+              className='logo'
+              src={logo}
+              alt='adattivo logo, visit: http://adattivo.co'
+            />
+            <h1> Employees Challenge</h1>
             <h3>Please Login to Continue</h3>
             <button
               className="tirtiaryBtn"

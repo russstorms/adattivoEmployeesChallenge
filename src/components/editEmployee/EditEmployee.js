@@ -124,7 +124,6 @@ const EditEmployee = ({ editEmployee, ...props }) => {
               onChange={e => setMiddleInitial(e.target.value)}
               defaultValue={employee.middleInitial}
               margin="normal"
-              required
               fullWidth
             />
             <TextField
@@ -140,11 +139,10 @@ const EditEmployee = ({ editEmployee, ...props }) => {
               fullWidth
             />
             <TextField
-              InputLabelProps={formStyles}
               InputProps={formStyles}
+              InputLabelProps={formStyles}
               variant="outlined"
               label='Date of Birth'
-              name='dateOfBirth'
               onChange={e => setDateOfBirth(e.target.value)}
               defaultValue={employee.dateOfBirth}
               margin="normal"
