@@ -75,7 +75,7 @@ const EditEmployee = ({ editEmployee, ...props }) => {
   return (
     <div className='EditEmployee'>
       <button
-        className="commonBtn"
+        className=""
         onClick={handleOpen}
       >
         Edit Employee
@@ -152,7 +152,7 @@ const EditEmployee = ({ editEmployee, ...props }) => {
               label={isActive ? 'Active' : 'Inactive'}
             />
             <button
-              className="commonBtn"
+              className=""
               type="submit"
               disabled={isEnabled ? false : true}
             >

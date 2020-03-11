@@ -2,12 +2,12 @@ import React from 'react'
 import EditEmployee from '../editEmployee/EditEmployee'
 
 const active = (
-  <h5 className='active' style={{ color: '#50C878' }}>
+  <h5 className='active-status' style={{ color: '#50C878' }}>
     Active
   </h5>
 )
 const inactive = (
-  <h5 className='inactive' style={{ color: '#F44336' }}>
+  <h5 className='inactive-status' style={{ color: '#F44336' }}>
     Inactive
   </h5>
 )

@@ -89,7 +89,7 @@ const AddEmployee = ({ addEmployee }) => {
   return (
     <div className='AddEmployee'>
       <button
-        className="commonBtn"
+        className=""
         onClick={handleOpen}
       >
         Add New Employee
@@ -165,7 +165,7 @@ const AddEmployee = ({ addEmployee }) => {
               label={isActive ? 'Active' : 'Inactive'}
             />
             <button
-              className="commonBtn"
+              className=""
               type="submit"
               disabled={isEnabled ? false : true}
             >
