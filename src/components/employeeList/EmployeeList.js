@@ -22,14 +22,13 @@ const getEmployeesByVisibilityFilter = (store, visibilityFilter) => {
   }
 }
 
-const EmployeeList = ({ employees }) => {
-  return (
+const EmployeeList = ({ employees }) => (
   <div className='EmployeeList'>
     {employees.map(employee => {
       return <Employee key={employee.id} employee={employee} />
     })}
   </div>
-)}
+)
 
 const mapStateToProps = state => {
   const { visibilityFilter } = state
