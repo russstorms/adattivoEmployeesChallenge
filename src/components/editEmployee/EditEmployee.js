@@ -73,7 +73,7 @@ const EditEmployee = ({ editEmployee, ...props }) => {
     employee.dateOfEmployment.length > 0
 
   return (
-    <div className='Edit-Employee'>
+    <div className='EditEmployee'>
       <button
         className="commonBtn"
         onClick={handleOpen}

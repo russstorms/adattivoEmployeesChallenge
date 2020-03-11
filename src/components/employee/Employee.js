@@ -2,18 +2,18 @@ import React from 'react'
 import EditEmployee from '../editEmployee/EditEmployee'
 
 const active = (
-  <h5 className='employee-info' style={{ color: '#50C878' }}>
+  <h5 className='active' style={{ color: '#50C878' }}>
     Active
   </h5>
 )
 const inactive = (
-  <h5 className='employee-info' style={{ color: '#F44336' }}>
+  <h5 className='inactive' style={{ color: '#F44336' }}>
     Inactive
   </h5>
 )
 
 const Employee = ({ employee }) => (
-  <div className='card-panel employee'>
+  <div className='Employee'>
     <h2>
       {employee.firstName} {employee.middleInitial !== '' ? `${employee.middleInitial}.` : ''} {employee.lastName}
     </h2>

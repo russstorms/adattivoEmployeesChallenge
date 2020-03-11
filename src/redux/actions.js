@@ -1,8 +1,8 @@
 import {
   ADD_EMPLOYEE,
   EDIT_EMPLOYEE,
+  SET_VISIBILITY_FILTER,
   TOGGLE_ACTIVE,
-  SET_STATUS_FILTER,
 } from './actionTypes'
 
 // Action creators
@@ -20,20 +20,20 @@ export const editEmployee = content => ({
   },
 })
 
-export const toggleActive = (index) => {
+export function toggleActive(index) {
   return { 
     type: TOGGLE_ACTIVE,
     index
   }
 }
 
-export const setStatusFilter = filter => ({
-  type: SET_STATUS_FILTER,
+export const setVisibilityFilter = filter => ({
+  type: SET_VISIBILITY_FILTER,
   payload: { filter },
 })
 
 // Filters
-export const STATUS_FILTERS = {
+export const VISIBILITY_FILTERS = {
   ALL: 'All',
   ACTIVE: 'Active',
   INACTIVE: 'Inactive',

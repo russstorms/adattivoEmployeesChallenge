@@ -87,7 +87,7 @@ const AddEmployee = ({ addEmployee }) => {
     dateOfEmployment.length > 0
 
   return (
-    <div className='Add-Employee'>
+    <div className='AddEmployee'>
       <button
         className="commonBtn"
         onClick={handleOpen}
