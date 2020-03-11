@@ -58,6 +58,7 @@ const EditEmployee = ({ editEmployee, ...props }) => {
       dateOfEmployment,
       isActive
     })
+    handleClose()
   }
 
   const toggleActive = () => {

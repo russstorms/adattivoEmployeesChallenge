@@ -62,6 +62,7 @@ const AddEmployee = ({ addEmployee }) => {
       dateOfEmployment,
       isActive
     })
+    handleClose()
     resetInputFields()
   }
 
