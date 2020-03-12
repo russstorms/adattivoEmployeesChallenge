@@ -114,7 +114,7 @@ const AddEmployee = ({ addEmployee }) => {
             onSubmit={handleSubmit}
           >
             <img 
-              className='logo'
+              className='logo-two'
               src={logo}
               alt='adattivo logo, visit: http://adattivo.co'
             />
