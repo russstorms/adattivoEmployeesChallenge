@@ -35,8 +35,7 @@ const FilterEmployees = ({ activeFilter, setStatusFilter }) => {
 }
 
 const mapStateToProps = state => {
-  console.log(state)
-  return { activeFilter: state.visibilityFilter }
+  return { activeFilter: state.statusFilter }
 }
 
 export default connect(
