@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Employee from '../employee/Employee'
-import { VISIBILITY_FILTERS } from '../../redux/actions'
+import { STATUS_FILTERS } from '../../redux/actions'
 
 // Styles
 import './EmployeeList.css'
@@ -16,11 +16,11 @@ const getEmployeeList = store =>
 const getEmployeesByVisibilityFilter = (store, visibilityFilter) => {
   const allEmployees = getEmployeeList(store)
   switch (visibilityFilter) {
-    case VISIBILITY_FILTERS.ACTIVE:
+    case STATUS_FILTERS.ACTIVE:
       return allEmployees.filter(employee => employee.isActive)
-    case VISIBILITY_FILTERS.INACTIVE:
+    case STATUS_FILTERS.INACTIVE:
       return allEmployees.filter(employee => !employee.isActive)
-    case VISIBILITY_FILTERS.ALL:
+    case STATUS_FILTERS.ALL:
     default:
       return allEmployees
   }

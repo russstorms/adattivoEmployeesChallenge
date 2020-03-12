@@ -26,7 +26,7 @@ export const setVisibilityFilter = filter => ({
 })
 
 // Filters
-export const VISIBILITY_FILTERS = {
+export const STATUS_FILTERS = {
   ALL: 'All',
   ACTIVE: 'Active',
   INACTIVE: 'Inactive',

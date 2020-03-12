@@ -1,6 +1,6 @@
-import { VISIBILITY_FILTERS } from '../actions'
+import { STATUS_FILTERS } from '../actions'
 
-const initialState = VISIBILITY_FILTERS.ALL
+const initialState = STATUS_FILTERS.ALL
 
 // Filter reducer
 const visibilityFilter = (state = initialState, action) => {

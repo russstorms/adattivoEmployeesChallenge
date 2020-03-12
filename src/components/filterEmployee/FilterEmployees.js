@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { setVisibilityFilter } from '../../redux/actions'
-import { VISIBILITY_FILTERS } from '../../redux/actions'
+import { STATUS_FILTERS } from '../../redux/actions'
 
 // Styles
 import './FilterEmployees.css'
@@ -12,8 +12,8 @@ const FilterEmployees = ({ activeFilter, setVisibilityFilter }) => {
   // Map filter buttons to header
   return (
     <div className='FilterEmployees'>
-      {Object.keys(VISIBILITY_FILTERS).map(filterKey => {
-        const filterStatus = VISIBILITY_FILTERS[filterKey]
+      {Object.keys(STATUS_FILTERS).map(filterKey => {
+        const filterStatus = STATUS_FILTERS[filterKey]
         
         return (
           <button
