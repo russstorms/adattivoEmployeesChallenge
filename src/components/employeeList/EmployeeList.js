@@ -12,6 +12,7 @@ const getEmployeesState = store => store.employees
 const getEmployeeList = store =>
   getEmployeesState(store) ? getEmployeesState(store).employees : []
 
+// Passes filter and returns new state based on filter
 const getEmployeesByVisibilityFilter = (store, visibilityFilter) => {
   const allEmployees = getEmployeeList(store)
   switch (visibilityFilter) {
@@ -25,6 +26,7 @@ const getEmployeesByVisibilityFilter = (store, visibilityFilter) => {
   }
 }
 
+// Map Employee component
 const EmployeeList = ({ employees }) => (
   <div className='EmployeeList'>
     {employees.map(employee => {

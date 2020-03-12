@@ -1,5 +1,6 @@
 .FilterEmployees {
   display: flex;
   padding: 15px;
+  background: linear-gradient(to right, rgba(152, 219, 255, 0.4), white);
 }
 

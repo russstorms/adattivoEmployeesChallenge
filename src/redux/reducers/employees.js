@@ -1,3 +1,4 @@
+// Initial employees list state
 const initialState = {
   employees: [
     {
@@ -84,6 +85,7 @@ const initialState = {
   ],
 }
 
+// Add & Edit Reducers to update employees state
 export default function employees(state = initialState, action) {
   switch (action.type) {
     case 'ADD_EMPLOYEE': {

@@ -5,6 +5,7 @@ import EditEmployee from '../editEmployee/EditEmployee'
 import './Employee.css'
 import 'animate.css/animate.min.css'
 
+// Employee Status
 const active = (
   <h5 className='active-status'>
     Active

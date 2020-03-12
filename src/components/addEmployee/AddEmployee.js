@@ -14,18 +14,6 @@ import {
 
 // Styles
 import './AddEmployee.css'
-import { makeStyles } from '@material-ui/core/styles'
-const useStyles = makeStyles(() => ({
-  modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  paper: {
-    border: 'none',
-    padding: '10px',
-  },
-}))
 
 const AddEmployee = ({ addEmployee }) => {
   // Form State
@@ -38,7 +26,6 @@ const AddEmployee = ({ addEmployee }) => {
   const [isActive, setIsActive] = useState(false)
 
   // Material UI Modal
-  const classes = useStyles();
   const [open, setOpen] = useState(false)
 
   const handleOpen = () => {
@@ -49,10 +36,12 @@ const AddEmployee = ({ addEmployee }) => {
     setOpen(false)
   }
 
+  // On component render, set random ID from uuid
   useEffect(() => {
     setId(uuid())
   }, [])
 
+  // Add submit on form
   const handleSubmit = e => {
     e.preventDefault()
     addEmployee({
@@ -68,6 +57,7 @@ const AddEmployee = ({ addEmployee }) => {
     resetInputFields()
   }
 
+  // Reset state on form submission
   const resetInputFields = () => {
     setId(null)
     setFirstName('')
@@ -78,16 +68,19 @@ const AddEmployee = ({ addEmployee }) => {
     setIsActive(false)
   }
 
+  // Employee status
   const toggleActive = () => {
     setIsActive(!isActive)
   }
 
+  // Override Material-UI modal styles
   const formStyles = ({
     style: {
       color: '#FFFFFF'
     }
   })
 
+  // Check input fields for characters
   const isEnabled =
     firstName.length > 0 &&
     lastName.length > 0 &&
@@ -105,7 +98,7 @@ const AddEmployee = ({ addEmployee }) => {
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
-        className={classes.modal}
+        className='modal'
         open={open}
         onClose={handleClose}
         closeAfterTransition

@@ -2,6 +2,7 @@ import { VISIBILITY_FILTERS } from '../actions'
 
 const initialState = VISIBILITY_FILTERS.ALL
 
+// Filter reducer
 const visibilityFilter = (state = initialState, action) => {
   switch (action.type) {
       case 'SET_VISIBILITY_FILTER': {

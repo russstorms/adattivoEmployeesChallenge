@@ -9,6 +9,7 @@ import '../../styles/index.css'
 
 const FilterEmployees = ({ activeFilter, setVisibilityFilter }) => {
 
+  // Map filter buttons to header
   return (
     <div className='FilterEmployees'>
       {Object.keys(VISIBILITY_FILTERS).map(filterKey => {

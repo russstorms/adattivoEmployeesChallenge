@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { editEmployee } from '../../redux/actions'
+import logo from '../app/adattivo.png'
 import {
   Backdrop,
   Modal,
@@ -9,20 +10,6 @@ import {
   FormControlLabel,
   Switch
 } from '@material-ui/core'
-
-// Styles
-import { makeStyles } from '@material-ui/core/styles'
-const useStyles = makeStyles(() => ({
-  modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  paper: {
-    border: 'none',
-    padding: '10px',
-  },
-}))
 
 const EditEmployee = ({ editEmployee, ...props }) => {
   const { employee } = props
@@ -37,7 +24,6 @@ const EditEmployee = ({ editEmployee, ...props }) => {
   const [isActive, setIsActive] = useState(employee.isActive)
 
   // Material UI Modal
-  const classes = useStyles();
   const [open, setOpen] = useState(false)
 
   const handleOpen = () => {
@@ -48,6 +34,7 @@ const EditEmployee = ({ editEmployee, ...props }) => {
     setOpen(false)
   }
 
+  // Edit submit on form
   const handleSubmit = e => {
     e.preventDefault()
     editEmployee({
@@ -62,16 +49,19 @@ const EditEmployee = ({ editEmployee, ...props }) => {
     handleClose()
   }
 
+  // Employee status
   const toggleActive = () => {
     setIsActive(!isActive)
   }
 
+  // Override Material-UI modal styles
   const formStyles = ({
     style: {
       color: '#FFFFFF'
     }
   })
 
+  // Check input fields for characters
   const isEnabled =
     employee.firstName.length > 0 &&
     employee.lastName.length > 0 &&
@@ -89,7 +79,7 @@ const EditEmployee = ({ editEmployee, ...props }) => {
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
-        className={classes.modal}
+        className='modal'
         open={open}
         onClose={handleClose}
         closeAfterTransition
@@ -104,6 +94,11 @@ const EditEmployee = ({ editEmployee, ...props }) => {
           <form
             onSubmit={handleSubmit}
           >
+            <img 
+              className='logo'
+              src={logo}
+              alt='adattivo logo, visit: http://adattivo.co'
+            />
             <h3 className="formTitle">Edit {employee.firstName}'s Information</h3>
             <TextField
               InputLabelProps={formStyles}
