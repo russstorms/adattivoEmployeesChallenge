@@ -31,5 +31,17 @@ You will also see any lint errors in the console.
 
 ## Login
 
-
 ![Splash Page](./images/splashPage.png)
+
+![Log In](./images/logInPage.png)
+
+![Logged In Page](./images/loggedIn.png)
+
+![Employees Page](./images/employees.png)
+
+![Filtered Employees Page](./images/filteredEmployees.png)
+
+![Add Modal](./images/addModal.png)
+
+![Edit Modal](./images/editModal.png)
+
