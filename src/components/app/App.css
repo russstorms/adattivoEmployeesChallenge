@@ -33,10 +33,10 @@
   opacity: .8;
   position: absolute;
   width: 600px;
-  height: 100vh;
+  height: 400px;
+  clip-path: polygon(0 0, 100% 50%, 100% 100%, 0% 100%);
   left: 0;
-  top: 395px;
-  transform: skewY(20deg);
+  top: 310px;
   background-image: linear-gradient(to top left, #0374B4, #5532FF);
   animation: shine 1s infinite ease-in-out;
   animation-duration: 6s;
