@@ -8,3 +8,4 @@ const employeeApp = combineReducers({
 })
 
 export default employeeApp
+
