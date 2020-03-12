@@ -29,7 +29,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-## Login
+## Login & Validation
 
 ![Splash Page](./images/splashPage.png)
 
@@ -37,11 +37,19 @@ You will also see any lint errors in the console.
 
 ![Logged In Page](./images/loggedIn.png)
 
+## Employee Management
+
 ![Employees Page](./images/employees.png)
+
+## Filter by Status
 
 ![Filtered Employees Page](./images/filteredEmployees.png)
 
+## Add Employee
+
 ![Add Modal](./images/addModal.png)
+
+## Edit Employee Information
 
 ![Edit Modal](./images/editModal.png)
 
