@@ -32,4 +32,4 @@ You will also see any lint errors in the console.
 ## Login
 
 
-![Splash Page](../images/splashPage.png)
+![Splash Page](./images/splashPage.png)
