@@ -13,9 +13,9 @@ const getEmployeeList = store =>
   getEmployeesState(store) ? getEmployeesState(store).employees : []
 
 // Passes filter and returns new state based on filter
-const getEmployeesByVisibilityFilter = (store, visibilityFilter) => {
+const getEmployeesByStatusFilter = (store, statusFilter) => {
   const allEmployees = getEmployeeList(store)
-  switch (visibilityFilter) {
+  switch (statusFilter) {
     case STATUS_FILTERS.ACTIVE:
       return allEmployees.filter(employee => employee.isActive)
     case STATUS_FILTERS.INACTIVE:
@@ -36,8 +36,8 @@ const EmployeeList = ({ employees }) => (
 )
 
 const mapStateToProps = state => {
-  const { visibilityFilter } = state
-  const employees = getEmployeesByVisibilityFilter(state, visibilityFilter)
+  const { statusFilter } = state
+  const employees = getEmployeesByStatusFilter(state, statusFilter)
   return { employees }
 }
 export default connect(mapStateToProps)(EmployeeList)

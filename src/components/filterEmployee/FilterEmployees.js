@@ -1,13 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { setVisibilityFilter } from '../../redux/actions'
+import { setStatusFilter } from '../../redux/actions'
 import { STATUS_FILTERS } from '../../redux/actions'
 
 // Styles
 import './FilterEmployees.css'
 import '../../styles/index.css'
 
-const FilterEmployees = ({ activeFilter, setVisibilityFilter }) => {
+const FilterEmployees = ({ activeFilter, setStatusFilter }) => {
 
   // Map filter buttons to header
   return (
@@ -24,7 +24,7 @@ const FilterEmployees = ({ activeFilter, setVisibilityFilter }) => {
               'inactiveFilter commonBtn'
             }
             onClick={() => {
-              setVisibilityFilter(filterStatus)
+              setStatusFilter(filterStatus)
             }}>
             {filterStatus}
           </button>
@@ -35,11 +35,12 @@ const FilterEmployees = ({ activeFilter, setVisibilityFilter }) => {
 }
 
 const mapStateToProps = state => {
+  console.log(state)
   return { activeFilter: state.visibilityFilter }
 }
 
 export default connect(
   mapStateToProps,
-  { setVisibilityFilter }
+  { setStatusFilter }
 )(FilterEmployees)
 

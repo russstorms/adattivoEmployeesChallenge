@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import visibilityFilter from './visibilityFilter'
+import statusFilter from './visibilityFilter'
 import employees from './employees'
 
 const employeeApp = combineReducers({
-  visibilityFilter,
+  statusFilter,
   employees,
 })
 

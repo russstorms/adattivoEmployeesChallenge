@@ -20,8 +20,8 @@ export function toggleActive(index) {
   }
 }
 
-export const setVisibilityFilter = filter => ({
-  type: 'SET_VISIBILITY_FILTER',
+export const setStatusFilter = filter => ({
+  type: 'SET_STATUS_FILTER',
   payload: { filter },
 })
 
