@@ -17,7 +17,7 @@ This application is an employee management system designed to:
 [https://adattivoemployeeschallenge.netlify.com/](https://adattivoemployeeschallenge.netlify.com/)
 
 ## To run locally, clone repo and run:
-### `npm install`
+### `yarn install`
 
 #### then
 
